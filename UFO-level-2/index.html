@@ -27,26 +27,38 @@
     </div>
     <div class="container">
       <div class="row margin-top-50">
-        <div class="col-md-4">
+        <div class="col-md-2">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Filter Search By Category</div>
+              <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
                 <form>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <select type="button" class="form-control btn btn-success" data-toggle="dropdown">
-                          <option href="#" class="dropdown-item">Date</option>
-                          <option href="#" class="dropdown-item">City</option>
-                          <option href="#" class="dropdown-item">State</option>
-                          <option href="#" class="dropdown-item">Country</option>
-                          <option href="#" class="dropdown-item">Shape</option>
-                      </select>
-                    </div>
-                      <input type="text" id="input" class="form-control" placeholder="enter here">
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Date</label>
+                        <input class="form-control" id="date" type="text" placeholder="1/11/2011">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a City</label>
+                        <input class="form-control" id="city" type="text" placeholder="joplin">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a State</label>
+                        <input class="form-control" id="state" type="text" placeholder="mo">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Country</label>
+                        <input class="form-control" id="country" type="text" placeholder="us">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Shape</label>
+                        <input class="form-control" id="shape" type="text" placeholder="triangle">
+                      </li>
+                    </ul>
                   </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
                 </form>
-                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
               </div>
             </div>
           </aside>
@@ -56,7 +68,7 @@
             <table id="ufo-table" class="table table-striped">
               <thead>
                 <tr>
-                  <th class="table-head">Date</th>
+                  <th class="table-head">Date/Time</th>
                   <th class="table-head">City</th>
                   <th class="table-head">State</th>
                   <th class="table-head">Country</th>
